@@ -10,8 +10,6 @@ function App() {
 
   const registerMovement = (x, y) => {
     setPos([{ ...pos[0], curx: x, cury: y }]);
-    console.log(JSON.stringify(lines));
-    //console.log(lines.length === 0);
   };
   const handleMouseDown = (e) => {
     if (pos.length === 0) {
