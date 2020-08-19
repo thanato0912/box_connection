@@ -13,6 +13,7 @@ function App() {
   };
 
   const handleClick = (x, y, id) => {
+    console.log(x,y)
     if (newLine.length === 1) {
       const length = id.length;
       if (lineID.substring(0, length - 1) === id.substring(0, length - 1)) {

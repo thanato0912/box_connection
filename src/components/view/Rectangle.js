@@ -10,7 +10,7 @@ export default function Rectangle(props) {
     y: props.yPos,
     leftCircle: {
       x: props.xPos + 20,
-      y: props.xPos + 20,
+      y: props.yPos + 20,
     },
     rightCircle: {
       x: props.xPos + 280,
