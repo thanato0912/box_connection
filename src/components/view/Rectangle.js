@@ -99,6 +99,7 @@ export default function Rectangle(props) {
         cornerRadius={13}
       />
       <Connector
+        style={{ cursor: 'pointer' }}
         id={state.id + '1'}
         x={props.xPos + 20}
         y={props.yPos + 20}
@@ -108,6 +109,7 @@ export default function Rectangle(props) {
         updateLinePoint={updateLinePoint}
       />
       <Connector
+        style={{ cursor: 'pointer' }}
         id={state.id + '2'}
         x={props.xPos + 280}
         y={props.yPos + 20}

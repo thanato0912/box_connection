@@ -22,7 +22,6 @@ export default function Connector(props) {
 
   return (
     <Circle
-      style={{ cursor: 'pointer' }}
       x={props.x}
       y={props.y}
       fill={circleColor}
