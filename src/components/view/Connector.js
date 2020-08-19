@@ -1,12 +1,16 @@
 import React, {useState} from 'react'
-import { Rect, Circle, Group } from 'react-konva';
+import {  Circle } from 'react-konva';
 
 export default function Connector(props) {
 
   const [hoverToggle, setHoverToggle] = useState(false);
-  // const [clickToggle, setClickToggle] = useState(false);
   const [circleColor, setCircleColor] = useState(props.circleColor);
-  
+
+  const handleClick = (e) => {
+    const circle = props.id.substring(props.id.length-1) === '1'?'left':'right';
+    props.updateLinePoint(circle, props.id);
+  }
+
   const handleHover = () => {
     if (!hoverToggle) {
       setCircleColor('#40E0D0');
@@ -16,15 +20,6 @@ export default function Connector(props) {
     setHoverToggle(!hoverToggle);
   };
 
-  // const handleClick = () => {
-  //   if (!clickToggle) {
-  //     setCircleColor('#00FFFF');
-  //   } else {
-  //     setCircleColor('#A9A9A9');
-  //   }
-  //   setClickToggle(!clickToggle);
-  // }
-
   return (
     <Circle
       x={props.x}
@@ -32,7 +27,7 @@ export default function Connector(props) {
       fill={circleColor}
       stroke='white'
       radius={7}
-      // onClick={handleClick}
+      onClick={handleClick}
       onMouseEnter={handleHover}
       onMouseLeave={handleHover}
     />
